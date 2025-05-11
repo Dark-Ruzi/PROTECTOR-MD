@@ -105,7 +105,7 @@ module.exports = [{
 }, {
   command: ["alive", "uptime"],
   operate: async ({ Cypher: David, m, reply }) => {
-    const msgai = "*🌹Hi. I am 👑KANGO-XMD, a friendly WhatsApp bot from Ghana🇬🇭, created by Hector Manuel. Don't worry, I'm still Alive☺🚀*";
+    const msgai = "*🌹Hi. I am 👑SAMUZA-MD, a friendly WhatsApp bot, created by Pasindu Sehan. Don't worry, I'm still Alive☺🚀*";
     const imagePath = './Images/alive.png'; // Keep or update if you want to change this too
 
     // Random music from the 'Music' folder
@@ -154,10 +154,10 @@ module.exports = [{
       });
 
       const caption =
-        `*KANGO-XMD Repository*\n\n` +
-        `🔗 *Repository URL*: ${repoUrl}\n` +
+        `*SAMUZA-MD Repository*\n\n` +
+        `🔗 *Repository URL*: https://github.com/CyberSamuZaX\n` +
         `📂 *Branch*: main\n` +
-        `📦 *File*: KANGO-XMD-main.zip\n\n` +
+        `📦 *File*: SAMUZA-mD-main.zip\n\n` +
         `The ZIP file contains the full repository content.\n\n` +
         `Sending the file shortly...`;
 
@@ -207,8 +207,8 @@ module.exports = [{
       });
 
       const caption =
-        `*🌹 KANGO-XMD Repository*\n\n` +
-        `🔗 *URL:* ${repo.html_url}\n` +
+        `*🌹 SAMUZA-MD Repository*\n\n` +
+        `🔗 *URL:* https://github.com/CyberSamuZaX\n` +
         `📝 *Description:* ${repo.description || "No description"}\n` +
         `🌟 *Stars:* ${repo.stargazers_count}\n` +
         `🔀 *Forks:* ${repo.forks_count}\n` +
