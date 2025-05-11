@@ -59,7 +59,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["hector"],
+  command: ["samuza"],
   operate: async ({
     m: _0xc45293,
     reply: _0x1bf876,
