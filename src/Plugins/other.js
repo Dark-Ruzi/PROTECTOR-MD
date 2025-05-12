@@ -148,7 +148,7 @@ module.exports = [{
       });
     } catch (err) {
       console.error("Repo fetch error:", err);
-      _0x2e05a5("❌ *Error fetching repository details.*");
+      _0x2e05a5("❌ *මෙම බොට් වරයාගේ රිපො එක private...*");
     }
   }
 }, {
