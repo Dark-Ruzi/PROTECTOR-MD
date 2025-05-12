@@ -60,7 +60,7 @@ module.exports = [{
       const _0x3ebbbb = performance.now();
       const _0x3f014e = (_0x3ebbbb - _0x210da5).toFixed(2) + " ms";
       await _0x2f5590.sendMessage(_0x20d4d2.chat, {
-        text: "*⚡ ᴋᴘᴛ ᴀɪ - ʙᴏᴛ:* " + _0x3f014e,
+        text: "*⚡ PROTECTOR-MD :* " + _0x3f014e,
         edit: _0x5aeaf4.key,
         contextInfo: {
           quotedMessage: _0x20d4d2.message
@@ -79,7 +79,7 @@ module.exports = [{
 }, {
   command: ["alive", "uptime"],
   operate: async ({ Cypher: David, m, reply }) => {
-    const msgai = "*🌹Hi. I am 👑ᴋᴘᴛ ᴀɪ - ʙᴏᴛ, a friendly WhatsApp bot, created by ᴋ.ᴘᴀɢɴɢɴᴀꜱɪʀɪ ᴛʜᴇʀᴏ. Don't worry, I'm still Alive☺🚀*";
+    const msgai = "*🌹Hi. I am 👑PROTECTOR, a friendly WhatsApp bot, created by ANGEL. Don't worry, I'm still Alive☺🚀*";
     const imagePath = './Images/alive.png'; // Keep or update if you want to change this too
 
     // Random music from the 'Music' folder
