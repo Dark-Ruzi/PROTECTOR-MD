@@ -79,7 +79,7 @@ module.exports = [{
 }, {
   command: ["alive", "uptime"],
   operate: async ({ Cypher: David, m, reply }) => {
-    const msgai = "*🌹Hi. I am 👑FAISAL-MD, a friendly WhatsApp bot, created by PROTECTOR. Don't worry, I'm still Alive☺🚀*";
+    const msgai = "*🌹Hi. I am 👑FAISAL-MD, a friendly WhatsApp bot, created by Shah Faisal. Don't worry, I'm still Alive☺🚀*";
     const imagePath = 'https://files.catbox.moe/m494ut.jpg'; // Keep or update if you want to change this too
 
     // Random music from the 'Music' folder
