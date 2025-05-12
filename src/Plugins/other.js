@@ -43,33 +43,7 @@ module.exports = [{
     });
   }
 }, {
-  command: ["pair"],
-  operate: async ({
-    m: _0x43a65b,
-    text: _0x6d32b9,
-    reply: _0x8895ab
-  }) => {
-    if (!_0x6d32b9) {
-      return _0x8895ab("*Provide a phone number*\nExample: .pair 23359373431x");
-    }
-    const _0x2f36c9 = _0x6d32b9.replace(/\+|\s/g, "").trim();
-    const _0x322048 = ["https://adiza-session.onrender.com/code?number=" + encodeURIComponent(_0x2f36c9), "https://adiza-session.onrender.com/code?number=" + encodeURIComponent(_0x2f36c9)];
-    for (const _0x891021 of _0x322048) {
-      try {
-        const _0x27a9f3 = await fetch(_0x891021);
-        if (!_0x27a9f3.ok) {
-          continue;
-        }
-        const _0x5eb4cb = await _0x27a9f3.json();
-        const _0x1d22bf = _0x5eb4cb.code || "No code received";
-        return _0x8895ab("*🔹 Pair Code:*\n```" + _0x1d22bf + "```\n\n🔹 *How to Link:* \n\n1. Open WhatsApp on your phone.\n\n2. Go to *Settings > Linked Devices*.\n\n3. Tap *Link a Device* then *Link with Phone*.\n\n4. Enter the pair code above.\n\n5. Alternatively, tap the WhatsApp notification sent to your phone.\n\n\n⏳ *Code expires in 2 minutes!*");
-      } catch (_0x492f5b) {
-        continue;
-      }
-    }
-    _0x8895ab("❌ *Error fetching pair code. Try again later.*");
-  }
-}, {
+
   command: ["ping", "p"],
   operate: async ({
     m: _0x20d4d2,
@@ -86,7 +60,7 @@ module.exports = [{
       const _0x3ebbbb = performance.now();
       const _0x3f014e = (_0x3ebbbb - _0x210da5).toFixed(2) + " ms";
       await _0x2f5590.sendMessage(_0x20d4d2.chat, {
-        text: "*⚡ 𝙆𝘼𝙉𝙂𝙊 𝙎𝙥𝙚𝙚𝙙:* " + _0x3f014e,
+        text: "*⚡ ᴋᴘᴛ ᴀɪ - ʙᴏᴛ:* " + _0x3f014e,
         edit: _0x5aeaf4.key,
         contextInfo: {
           quotedMessage: _0x20d4d2.message
@@ -105,7 +79,7 @@ module.exports = [{
 }, {
   command: ["alive", "uptime"],
   operate: async ({ Cypher: David, m, reply }) => {
-    const msgai = "*🌹Hi. I am 👑SAMUZA-MD, a friendly WhatsApp bot, created by Pasindu Sehan. Don't worry, I'm still Alive☺🚀*";
+    const msgai = "*🌹Hi. I am 👑ᴋᴘᴛ ᴀɪ - ʙᴏᴛ, a friendly WhatsApp bot, created by ᴋ.ᴘᴀɢɴɢɴᴀꜱɪʀɪ ᴛʜᴇʀᴏ. Don't worry, I'm still Alive☺🚀*";
     const imagePath = './Images/alive.png'; // Keep or update if you want to change this too
 
     // Random music from the 'Music' folder
@@ -122,7 +96,7 @@ module.exports = [{
     // React with emoji
     await David.sendMessage(m.chat, {
       react: {
-        text: "❤️",
+        text: "🚫",
         key: m.key
       }
     });
@@ -130,7 +104,7 @@ module.exports = [{
     // Send image with caption + uptime
     await David.sendMessage(m.chat, {
       image: { url: imagePath },
-      caption: `${msgai}\n\n*⏰ Uptime: ${botUptime}*`
+      caption: `${msgai}\n\n*⏰ Uptime: 6 ᴍɪɴ*`
     }, { quoted: m });
 
     // Send random music
@@ -141,56 +115,7 @@ module.exports = [{
     }, { quoted: m });
   }
 }, {
-  command: ["script"],
-  operate: async ({ m, Cypher, reply }) => {
-    try {
-      const repoUrl = "https://github.com/OfficialKango/KANGO-XMD";
-      const zipUrl = `${repoUrl}/archive/refs/heads/main.zip`;
-
-      // Fetch repo details to get avatar
-      const { data: repo } = await axios.get("https://api.github.com/repos/OfficialKango/KANGO-XMD");
-      const { data: avatarBuffer } = await axios.get(repo.owner.avatar_url, {
-        responseType: "arraybuffer"
-      });
-
-      const caption =
-        `*SAMUZA-MD Repository*\n\n` +
-        `🔗 *Repository URL*: https://github.com/CyberSamuZaX\n` +
-        `📂 *Branch*: main\n` +
-        `📦 *File*: SAMUZA-mD-main.zip\n\n` +
-        `The ZIP file contains the full repository content.\n\n` +
-        `Sending the file shortly...`;
-
-      // Send preview message with thumbnail
-      await Cypher.sendMessage(m.chat, {
-        text: caption,
-        contextInfo: {
-          externalAdReply: {
-            title: "KANGO-XMD GitHub Repo",
-            body: "Download the source code here",
-            mediaType: 1,
-            thumbnail: Buffer.from(avatarBuffer),
-            sourceUrl: repoUrl
-          }
-        }
-      }, { quoted: m });
-
-      // Download the ZIP file
-      const { data: zipBuffer } = await axios.get(zipUrl, { responseType: "arraybuffer" });
-
-      // Send the ZIP file
-      await Cypher.sendMessage(m.chat, {
-        document: zipBuffer,
-        fileName: "KANGO-XMD-main.zip",
-        mimetype: "application/zip"
-      }, { quoted: m });
-
-    } catch (err) {
-      console.error("Script command error:", err);
-      reply("❌ *Failed to fetch or send the repository ZIP.*");
-    }
-  }
-}, {
+ 
   command: ["repo", "repository"],
   operate: async ({
     m: _0x40a183,
@@ -207,22 +132,15 @@ module.exports = [{
       });
 
       const caption =
-        `*🌹 SAMUZA-MD Repository*\n\n` +
-        `🔗 *URL:* https://github.com/CyberSamuZaX\n` +
-        `📝 *Description:* ${repo.description || "No description"}\n` +
-        `🌟 *Stars:* ${repo.stargazers_count}\n` +
-        `🔀 *Forks:* ${repo.forks_count}\n` +
-        `📅 *Last Updated:* ${new Date(repo.updated_at).toLocaleString()}\n\n` +
-        `👨‍💻 *Developer:* ${repo.owner.login}\n` +
-        `✨ *Tip:* Fork it, star it, and deploy your version!\n\n` +
-        `@${_0x40a183.sender.split("@")[0]} don’t forget to star the repo!`;
+        `➢ *මෙම බොට් වරයා වෙනකෙකුට සෑදිය නොහැක.*
+         ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ᴋ.ᴘᴀɢɴɢɴᴀꜱɪʀɪ ᴛʜᴇʀᴏ*`;
 
       await _0xdd323.sendMessage(_0x40a183.chat, {
         text: caption.trim(),
         contextInfo: {
           mentionedJid: [_0x40a183.sender],
           externalAdReply: {
-            title: "KANGO-XMD REPO",
+            title: "ᴋᴘᴛ ᴀɪ - ʙᴏᴛ",
             mediaType: 1,
             thumbnail: Buffer.from(avatarBuffer),
             sourceUrl: repo.html_url
