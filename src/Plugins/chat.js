@@ -59,7 +59,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["samuza"],
+  command: ["kpt"],
   operate: async ({
     m: _0xc45293,
     reply: _0x1bf876,
