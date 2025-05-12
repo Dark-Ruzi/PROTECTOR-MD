@@ -123,9 +123,6 @@ module.exports = [{
     reply: _0x2e05a5
   }) => {
     try {
-      // Fetch repo data from GitHub
-      const { data: repo } = await axios.get("https://api.github.com/repos/OfficialKango/KANGO-XMD");
-
       // Fetch the repo owner's avatar image
       const { data: avatarBuffer } = await axios.get(repo.owner.avatar_url, {
         responseType: "arraybuffer"
